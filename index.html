@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eko hotel Web</title>
+
+<!-- Bootstrap Cdn link online -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<!-- Font awesome link -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- css link -->
+ <link rel="stylesheet" href="../css/style.css">
+ <link rel="stylesheet" href="../css/responsive_style.css">
+
+
+<!-- owl carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+<!-- bootstrap icon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+
+
+</head>  
+
+
+
+<style>
+
+/* css styling */
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    /* background-color */
+    --primary-color: #002E5D;
+    --secondary-color: #888888;
+    --bg-color: #f4f4f4;
+    --bg-white: #fff;
+    --bg-black: #000;
+    --main-color: #ffc107;
+
+    /* Text Style */
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'oswald', sans-serif;
+    --primary-text:  #002E5D;
+    --secondary-text: #888888;
+    --text-white: #fff;
+    --text-black: #151515;
+    --text-gray: #e4e4e4;
+    --main-text:#ffc107 ;
+}
+body{
+    font-family: var(--primary-font);
+    background-color: var(--bg-white);
+}
+a{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+width: .357rem;
+}
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+}
+section{
+    padding:3.125rem 0;
+}
+.img-fluid{
+    width: 60%;
+    height: 60%;
+}
+.main-btn{
+    font-size: 1rem;
+    font-weight: 500;
+    /* margin-left: 6px; */
+    color: var(--primary-color);
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 4px 17px;
+    border-radius: 3.125rem;
+    line-height: 1.75rem;
+    display: inline-block;
+    transition:0.3s ease, transform 0.3s ease;
+
+}
+.main-btn:hover{
+    background:var(--main-color);
+    color: black;
+    transform: scale(1.03);
+    border: none;
+}
+h1{
+   font-size: 2rem;
+   /* line-height: 4.2rem; */
+   font-weight: 600;
+   /* color: var(--text-white); */
+   margin-bottom: 1.25rem;
+   /* text-transform: uppercase; */
+}
+h3{
+    margin-bottom: 1.875rem;
+    line-height: 2.875rem;
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--primary-text);
+    font-family:var(--secondary-font);
+}
+h3 span{
+    color: var(--secondary-color);
+}
+h5{
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--primary-text);
+    font-weight: 500;
+    font-family: var(--secondary-font);
+}
+h6{
+    font-size: 17px;
+    color: var(--primary-text);
+    margin-bottom: .9375rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: var(--secondary-font);
+}
+p{
+    font-size: 1rem;
+    color: var(--text-black);
+    line-height: 1.6325rem;
+}
+
+
+/*  navbar css */
+.header_wrapper .navbar{
+    /* position: relative; */
+    padding: 10px 20px;
+    background-color: var(--bg-white);
+    -webkit-box-shadow: 0 .5rem .375rem -0.375rem rgb(0 0 0 / 40%);
+    box-shadow: 0 .3rem .360rem -0.360rem rgb(0 0 0 / 40%);
+    -webkit-transition:background 0s ease-in-out 0s, margin-top 0s ease-in-out 0s, opacity 0s ease-in-out 0s;
+    transition:background 0s ease-in-out 0s, margin-top 0s ease-in-out 0s, opacity 0s ease-in-out 0s;
+}
+
+.header_wrapper .navbar-toggler{
+    border: 0;
+    color: var(--primary-text);
+    line-height: 2;
+}
+.header_wrapper .navbar-toggler:focus{
+    box-shadow:none;   
+}
+.header_wrapper .nav-item{
+    margin: 0 8px;
+}
+.header_wrapper .nav-item .nav-link{
+font-size: 16px;
+font-weight: 500;
+color:var(--primary-text);
+display: inline-block;
+}
+.header_wrapper .nav-item .nav-link:hover,
+.header_wrapper .nav-item .nav-link.active{
+color: var(--main-color);
+}
+.navbar{
+position: fixed;
+top:0;
+left:0;
+width: 100%;
+z-index: 9999;
+background-color: rgba(255,255,255,.85);
+-webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+@keyframes fadeInDown{
+    0%{
+top:-30%;
+    }
+    50%{
+        top: -15%;
+    }
+    100%{
+        top:0;
+    }
+}
+
+  
+/* /* back to top * */
+.scroll-up-btn{
+    position:fixed;
+    height: 45px;
+    width: 42px;
+    background: yellowgreen;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 24px;
+    border-radius: 6px;
+    opacity: 0;
+    border-bottom-width:2px ;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    animation: action 4s infinite;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+filter: brightness(90%)
+}
+
+
+/*  Home section */
+.carousel-caption{
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 43, 0.7);
+    /* opacity: 0.5; */
+    z-index: 1;
+}
+.carousel-control-prev,
+.carousel-control-next{
+    width: 10%;
+
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    width: 2rem;
+    height: 2rem;
+}
+.carousel-caption h5{
+    margin-bottom: 10px;
+}
+
+
+/* booking Area */
+.booking-area{
+    background: var(--bg-white);
+    box-shadow: 0 .625rem .9375rem 0 rgb(0 0 0 / 10%);
+    margin-top: -4rem;
+    padding: 30px 28px;
+    z-index: 999999;
+    position: relative;
+}
+.booking-area .main-btn{
+    font-size: 13px;
+}
+
+/* about section */
+.section-title{
+    position: relative;
+    display: inline-block;
+    /* margin-bottom: 20px; */
+}
+.section-title::before{
+    position: absolute;
+    content:"";
+    width: 45px;
+    height: 2px;
+    top:50%;
+    left:-55px;
+    margin-top: -1px;
+    background: #ffc107;
+}
+.section-title::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top:50%;
+    right:-55px;
+    margin-top: -1px;
+    background: #ffc107;
+}
+.section-title.text-start::before,
+.section-title.text-end::after{
+display: none;
+}
+.i{
+    font-size: 1rem;
+}
+.numbers{
+    font-size: 23px;
+    margin-top: 3px;
+}
+.box{
+    padding: 10px 10px;
+}
+
+
+/* room section */
+.room_wrapper .room-items{
+    position: relative;
+    overflow:hidden;
+}
+.room_wrapper .room-items img{
+    width:100%;
+    -webkit-transition: all 400ms ease-in 0s;
+    transition: all 400ms ease-in 0s;
+}
+.room_wrapper .room-items:hover img{
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+transform: scale3d(1.05, 1.05, 1.05);
+}
+.room_wrapper .room-items::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: var(--bg-black);
+    opacity:0;
+    z-index: 1;
+    -webkit-transition: all 400ms ease-in 0s;
+    transition: all 400ms ease-in 0s;
+
+}
+.room_wrapper .room-items:hover::before{
+    opacity:0.5;
+}
+.room-item-wrap{
+    position: absolute;
+    left: 1.875rem;
+    right: 1.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.room-items .room-content{
+    border: 2px solid var(--bg-white);
+    padding: 10px;
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+    transition: all 500ms ease-in 0s;
+opacity: 0;
+}
+.room-items:hover .room-content{
+    opacity:1;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+
+/* service styling */
+.service-menu-area ul li{
+    margin-bottom: 5px;
+
+}
+.service-icon i{
+ font-size: 18px;
+ margin-bottom: 6px;
+ color: #ffc107;
+ /* border-radius: 50%; */
+}
+.service-menu-area h5{
+    font-size: 20px;
+    color: rgb(43, 43, 43);
+    font-weight: 550;
+}
+.service-menu-area p{
+    font-size: 14px;
+}
+
+/* Youtube styling */ 
+.hero-section{
+    background-color: #10172a;
+    color: white;
+    padding: 30px;
+    }
+    .hero-section h1{
+    font-weight: 500;
+    font-size: 36px;
+    margin-top: 2px;
+    }
+    .hero-section p{
+    color: white;
+    font-size: 14px;
+    margin-top: -4px;
+    }
+     .hero-section .section-title{
+        font-size: 23px;
+     }
+     .hero-section .section-title::before,
+     .hero-section .section-title.text-end::after{
+    display: none;
+    }
+    .hero-section .btn{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    .btn-room {
+        background-color: transparent; 
+        border: 2px solid wheat; 
+        color: white; 
+        padding: 10px 20px; 
+        text-align: center;
+        text-decoration: none;
+        border-radius: 3px; 
+        transition: all 0.2s ease; 
+        font-weight: 400;
+        
+      }
+      
+      .btn-room:hover {
+        background-color: #ffc107;
+        color: black; 
+        border: 2px solid #ffc107;
+      }
+
+    .btn-book{
+        padding: 10px 20px;
+        text-align: center;
+        background-color: #ffc107;
+        color:black;
+        text-decoration: none;
+        font-weight: 400;
+    }
+    .video-thumbnail-container {
+        position: relative;
+        display: inline-block;
+        width: 520px; 
+        height: 320px;
+      }
+      
+      .video-thumbnail {
+        display: block;
+        position: relative;
+        width: 100%; 
+        height: 100%;
+      }
+      
+      .video-thumbnail-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 5px;
+      }
+      
+      .play-button-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+          background: rgba(0, 0, 0, 0.6);
+        width: 50px; 
+        height: 50px; 
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      
+      .play-button-overlay svg {
+        fill: #ffc107;
+        width: 40px; 
+        height: 40px; 
+        margin-left: 20px;
+      }
+      
+    
+
+/* Team Styling */
+.team_wrapper .card{
+position: relative;
+overflow: hidden;
+}
+.team_wrapper .team-info{
+    background-color: #ffc107;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: -5.6876rem;
+    transition: all 0.3s ease-in-out;
+}
+.team_wrapper .card:hover  .team-info{
+margin-bottom: 0;
+}
+.team_wrapper .team-info h5,
+.team_wrapper .team-info p
+{ 
+    color: var(--text-black);
+}
+.team_wrapper .team-info h5{
+    color: var(--primary-color);
+}
+
+.team_wrapper .team-info .social-network{
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding: 1.25rem;
+    margin: 1.25rem -1.25rem -1.25rem;
+    background-color: var(--primary-color);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.team_wrapper .team-info .social-network li a{
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    display: block;
+    border-radius: 50%;
+    font-size: .9375rem;
+    border: .0625rem solid var(--bg-white);
+    
+} 
+
+/*  testimonial styling*/
+.testimonial{
+    background: url(../);
+}
+.testimonial-carousel{
+    padding-left: 65px;
+    padding-right: 65px;
+
+}
+.testimonial-carousel .testimonial-item{
+    padding: 30px;
+}
+.testimonial-carousel .owl-nav {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: calc(50% - 20px);
+    left: 0;
+    display: flex !important;
+    justify-content: space-between;
+    z-index: 9999;
+    visibility: visible;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: yellow;
+    border-radius: 50%;
+    font-size: 18px;
+    border: 2px solid white ;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    background: orange; 
+    color: white;
+}
+
+/* footer */
+.footer_wrapper h5{
+color: white;
+margin-bottom: 1rem;
+}
+.footer_wrapper ul li{
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+.footer_wrapper p{
+    font-size: 14px;
+}
+.footer_wrapper .contact-info ul li a{
+    color: #ffc107;
+}
+.footer_wrapper .link-widget li a,
+.footer_wrapper p{
+    color: var(--text-gray);
+    padding-left: 1.5rem;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+.footer_wrapper .link-widget li a:before{
+   content: '\f105';
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   position: absolute;
+   left: 0.3rem;
+   top:50%;
+   -webkit-transform: translateY(-50%);
+   transform: translateY(-50%);
+}
+.footer_wrapper .link-widget li a:hover{
+    color: #ffc107;
+    margin-left: 1rem;
+}
+ .footer_wrapper .social-network a{
+    width: 2.1875rem;
+    height: 2.1875rem;
+    margin: .5rem;
+    line-height: 2rem;
+    font-size: .875rem;
+    display: inline-block;
+    border: .125rem solid var(--text-gray);
+    color: var(--text-gray);
+    text-align: center;
+    border-radius: 100%;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+ }
+ .footer_wrapper .social-network a:hover{
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: white;
+    transform: translateY(-0.1875rem);
+    box-shadow: 0.625rem .9375rem 0 rgb(0 0 0 / 10%);
+ }
+ .footer_wrapper .form-control:focus{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid#ffc107;
+ }
+
+ .footer_wrapper .copyright-section{
+    background-color:white;
+    padding: 1rem 0 0.3125rem;
+    text-align: center;
+    font-size: 25px;
+ }
+ .footer_wrapper .copyright-section p{
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    
+ }
+ .footer_wrapper .copyright-section a{
+    color: #ffc107;
+ }
+ .footer_wrapper .copyright-section a:hover{
+    text-decoration: underline;
+ }
+
+
+/* end of css styling */
+
+/* css responsiveness */
+@media (max-width: 1199px) {
+    .header_wrapper .navbar-expand-lg .navbar-nav{
+            align-items: center;
+        }
+        .header_wrapper .navbar-expand-lg .navbar-nav .nav-link{
+            padding: 0;
+            font-size: 15px;
+        }
+        .main-btn{
+            font-size: 13px;
+        }
+    
+        /* booking area */
+        .booking-area{
+            padding: 3rem .625rem;
+        }
+        .booking-area .main-btn{
+      padding-left: 5px !important ;
+      padding-right: 5px !important ;
+    
+    }
+    /* room styling */
+    .room-item .room-content{
+        padding: 1rem 1rem;
+    }
+    .room-item .room-content{
+        font-size: 1.2rem;
+    }
+    .room-item .room-content p{
+        font-size: 0.75rem;
+    }
+    
+    /* service */
+    .service-item-wrap .tab-content img{
+        width:100%
+    }
+    .service-menu-area ul li a{
+        margin-bottom: .8125rem;
+    overflow: hidden;
+    }
+    .service-menu-area ul li a h5{
+        margin-bottom: .375rem;
+    }
+    }
+    
+    
+    @media (max-width:991px) {
+        section{
+            padding: 4px;
+        }
+        .header-scrolled{
+            height: auto;
+        }
+        .header_wrapper .menu-navbar-nav{
+            text-align: center;
+            /* background-color: var(--primary-color); */
+            /* color: white; */
+            padding-bottom: 1rem;
+        }
+        .header_wrapper .nav-link .nav-link{
+            margin-top: .9375rem;
+        }
+       
+        .header_wrapper .navbar-brand{
+            width: 55%;
+            height: 55%;
+        }
+        .booking-area{
+            padding: 3.125rem 1.875rem;
+        }
+        .carousel-caption h1{
+            font-size: 1.3rem;
+        }
+        .carousel-caption h5{
+         font-size: 14px;
+        }
+    
+        /* room styling */
+        
+    .room-item .room-content{
+        padding: 1rem 1rem;
+    }
+    .room-item .room-content{
+        font-size: 1.5rem;
+    }
+    .room-item .room-content p{
+        font-size: 1rem;
+    }
+    .room_wrapper h1{
+        font-size: 26px;
+    }
+    .room_wrapper h6{
+        font-size: 17px;
+    }
+    
+    /* service styling */
+    .section-title h6{
+        font-size: 2px;
+    }
+    .Service_wrapper h1{
+        font-size: 26px;
+    }
+    .Service_wrapper h6{
+        font-size: 17px;
+    }
+    .service-menu-area{
+        padding: 1.5rem 0.5rem;
+     }
+      
+    /* team styling */
+    .team_wrapper h1{
+        font-size: 26px;
+    }
+    .team_wrapper h6{
+        font-size: 17px;
+    }
+     /* testimonial styling */
+      .testimonial-section h1{
+        font-size: 26px;
+      }
+    
+     /* footer styling */
+     .footer_wrapper .copyright-section p{
+        font-size: 12px;
+     }
+     .footer_wrapper img{
+        width: 20%;
+     }
+    
+     
+    
+    /* testimonial */
+    .testimonial-item h6{
+        font-size: 13px;
+        font-weight: 600;
+    }
+    
+    /* youtube styling */
+    .hero-section{
+        padding: 10px 0 10px;
+    }
+    .video-thumbnail-image{
+        width: 90%;
+        height: 90%;
+        margin-top: 20px;
+    }
+    .hero-section h1{
+        font-weight: 400;
+        font-size: 25px;
+        }
+        .hero-section p{
+        color: white;
+        font-size: 12px;
+        }
+         .hero-section .section-title{
+            font-size: 17px;
+         }
+    }
+    
+    
+    
+    @media (max-width: 767px) {
+    h1{
+        font-size: 1.875rem;
+        line-height: 2.5rem;
+    }
+    h3{
+        font-size: 1.75rem;
+        line-height: 2.1875rem;
+    }
+    h5{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: .8125rem;
+        line-height: 1.5rem;
+    }
+    
+    .carousel-caption h5{
+        font-size: 17px;
+       }
+       .carousel-caption h1{
+        font-size: 1.6rem;
+    }
+    .booking-area{
+        padding: 3.125rem 1.875rem;
+    }
+     /* footer */
+     .footer_wrapper > div{
+        padding: 0 1.875rem;
+     }
+    }
+    
+/* end of css responsiveness */
+</style>
+
+
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-ba-offset="100">
+
+
+  <!-- scroll-up-btn -->
+  <div class="scroll-up-btn">
+    <i class="bi bi-chevron-double-up"></i>
+  </div>
+<!-- Navbar Section -->
+<header class="header_wrapper">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/eko hotel images/Eko hotel logo-header.jpg" class="img-fluid" alt="logo">
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <i class="fas fa-stream navbar-toggler-icon"></i>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav menu-navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#room">Rooms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonial">Testimonial</a>
+              </li>
+              <li class="nav-item mt-3 mt-lg-0">
+                <a class="main-btn" href="#">Book Now</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
+
+<!-- Navbar Section exit -->
+
+<section class="home" id="home">
+  <div class="container-fluid">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/eko hotel images/eko-hotel-2.jpg" class="d-block w-100" style="min-width: 50px;  height: 75vh;" alt="...">
+          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center ">
+            <div class="p-3" style="max-width: 700px;">
+              <h5 class="section-title text-white text-uppercase mb3 animated slideInDown">Luxury Living</h5>
+            <h1 class="display-6 text-white mb-4 ">Discover A Brand Luxurious Hotel.</h1>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/eko hotel images/eko hptel 3.jpg" class="d-block w-100" style="min-width: 50px; height: 75vh;" alt="...">
+          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center ">
+            <div class="p-2" style="max-width: 700px;">
+              <h5 class="section-title text-white text-uppercase mb3 animated slideInDown">Luxury Living</h5>
+            <h1 class="display-6 text-white mb-4 ">Discover A Brand Luxurious Hotel.</h1>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/eko hotel images/eko hotel 4.jpeg"class= "d-block w-100" style="min-width: 50px; height: 75vh;"  alt="...">
+          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+            <div class="p-3" style="max-width: 700px;">
+              <h5 class="section-title text-white text-uppercase mb3 animated slideInDown">Luxury Living</h5>
+            <h1 class="display-6 text-white mb-4 ">Discover A Brand Luxurious Hotel.</h1>
+            </div>
+            <!-- <a href="" class="btn">Book Now</a>  -->
+          </div>
+        </div>
+      </div>
+      
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="container booking-area">
+    <form class="row">
+      <div class="col-lg mb-3 mb-lg-0">
+        <input type="text" class="form-control datimepicker-input" placeholder="check in" data-target="#date1" data-toggle="datetimepicker">
+       
+      </div>
+      <div class="col-lg mb-3 mb-lg-0">
+        <input type="text" class="form-control datimepicker-input" placeholder="check out" data-target="#date2" data-toggle="datetimepicker">
+       </div>
+       <div class="col-lg mb-3 mb-lg-0">
+        <select class="form-select">
+          <option selected>Adults</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+       </div>
+       <div class="col-lg mb-3 mb-lg-0">
+        <select class="form-select">
+          <option selected>Children</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+       </div>
+       <div class="col-lg mb-3 mb-lg-0">
+        <button type="submit" class="main-btn rounded-2 px-lg-3 ">Check Avaliability</button>
+       </div>
+    </form>
+  </div>
+</section>
+
+<!-- end of home  -->
+
+<!-- about section -->
+ <section id="about" class="about-section">
+            <div class="container-xxl py-5">
+              <div class="container">
+                <div class="row g-5 align-items-center py-4">
+                 <div class="col-lg-6 ">
+                  <h6 class="section-title text-start text-warning text-uppercase">About Us </h6>
+                  <h1 class="mb-4">Welcome to <span class="text-warning text-uppercase">Eko Hotel</span></h1>
+                  <p class="mb-4">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, sequi officia ipsa incidunt, nihil sint temporibus atque magnam dolore voluptas impedit delectus omnis.
+                  </p>
+                  <div class="row g-3 pb-4">
+                    <div class="col-sm-4 wow fadein">
+                    <div class="border rounded p-1"> 
+                     <div class="border rounded text-center p-2">
+                     <i class="fa fa-hotel fa-2x text-warning mb-2 link"></i>
+                     <h2 class="mb-1 numbers" data-toggle="counter-up">1234</h2>
+                     <p class="mb-0">Rooms</p>
+                     </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-4 wow fadein">
+                      <div class=" box border  rounded p-1"> 
+                       <div class="border rounded text-center p-2">
+                       <i class="fa fa-user-cog fa-2x text-warning mb-2 link"></i>
+                       <h2 class="mb-1 numbers" data-toggle="counter-up">1234</h2>
+                       <p class="mb-0">Staffs</p>
+                       </div>
+                      </div>
+                      </div>
+
+                      <div class="col-sm-4 wow fadein">
+                        <div class="border rounded p-1"> 
+                         <div class="border rounded text-center p-1">
+                         <i class="fa fa-users fa-2x text-warning mb-2 mt-2"></i>
+                         <h2 class="mb-1 numbers" data-toggle="counter-up">1234</h2>
+                         <p class="mb-0">Client</p>
+                         </div>
+                        </div>
+                        </div>
+                  </div>
+                  <a href="" class="btn btn-warning py-3 px-5 mt-2 text-white">Explore More</a>
+                </div>
+                  <div class="col-lg-6">
+                    <div class="row g-3">
+                     <div class="col-6 text-end">
+                      <img src="images/eko hotel images/about-image 1.jpeg" alt="" style= "margin-top: 25%; width: 90%; height: 25vh; "class="img-fluid rounded w-100 wow zoomIn">
+                     </div>
+                     <div class="col-6 text-start">
+                      <img src="images/eko hotel images/about-image 2.jpeg" alt="" class="img-fluid  w-100 wow zoomIn" >
+                     </div>
+                     <div class="col-6 text-end">
+                      <img src="images/eko hotel images/about-image 3.jpeg" alt="" class="img-fluid  w-75 wow zoomIn" >
+                     </div>
+                     <div class="col-6 text-start">
+                      <img src="images/eko hotel images/about-image 4.jpeg" alt="" class="img-fluid  w-100 wow zoomIn" >
+                     </div>
+                    </div>
+                  </div>
+                 </div>
+                </div>
+                </div>
+              </section>
+
+<!-- end of about section -->
+
+<!-- room section -->
+              <section id="room" class="room_wrapper">
+              <div class="container-xxl py-5">
+              <div class="container">
+              <div class="text-center wow fadeIn">
+              <h6 class="section-title text-center text-warning text-uppercase">Our Rooms</h6>
+            <h1 class="mb-5">Explore our <span class="text-warning text-uppercase">Rooms</span></h1>
+            </div>
+            <div class="row m-0">
+             <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="room-items">
+              <img src="images/eko hotel images/eko hotel room 1.jpeg" alt="" class="img-fluid w-100" style="max-width: 200%; height: 60vh;">
+            <div class="room-item-wrap">
+              <div class="room-content">
+              <h5 class="text-white mb-lg-5  mt-3 text-decoration-underline">Royal-suit</h5>
+              <p class="text-white">
+                dicover five of our favorite dresses from our new collection that are destined to be 
+                worn and loved immediately
+              </p>
+              <p class="text-white fw-bold mt-lg-4">$220 / per Night</p>
+              <a href="" class="main-btn border-white text-white mt-lg-3">Book now</a>
+              </div>
+            </div>
+            </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <div class="room-items">
+                <img src="images/eko hotel images/eko hotel room 2.jpg" alt="" class="img-fluid w-100" style="max-width: 200%; height: 60vh;">
+              <div class="room-item-wrap">
+                <div class="room-content">
+                <h5 class="text-white mb-lg-5 mt-3 text-decoration-underline">Royal-suit</h5>
+                <p class="text-white">
+                  dicover five of our favorite dresses from our new collection that are destined to be 
+                  worn and loved immediately
+                </p>
+                <p class="text-white fw-bold mt-lg-4">$220 / per Night</p>
+                <a href="" class="main-btn border-white text-white mt-lg-3">Book now</a>
+                </div>
+              </div>
+              </div>
+              </div>
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="room-items">
+                  <img src="images/eko hotel images/eko hoel room 4.jpg" alt="" class="img-fluid w-100" style="max-width: 200%; height: 60vh;">
+                <div class="room-item-wrap">
+                  <div class="room-content">
+                  <h5 class="text-white mb-lg-5 mt-3 text-decoration-underline">Royal-suit</h5>
+                  <p class="text-white">
+                    dicover five of our favorite dresses from our new collection that are destined to be 
+                    worn and loved immediately
+                  </p>
+                  <p class="text-white fw-bold mt-lg-4">$220 / per Night</p>
+                  <a href="" class="main-btn border-white text-white mt-lg-3">Book now</a>
+                  </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            </div>
+           </section>
+ <!-- end of room section -->
+
+ <!-- services section -->
+  <section id="services" class="Service_wrapper">
+          <div class="container-xxl py-5">
+          <div class="container"> 
+            <div class="text-center wow fadeInUp">
+              <h6 class="section-title text-center text-warning text-uppercase">We are here for you</h6>
+            <h1 class="mb-5"> our Awesome <span class="text-warning text-uppercase">Services</span></h1>
+
+            </div>
+            <div class="row align-items-center service-item-wrap">
+              <div class="col-lg-7 p-lg-0">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="spa" role="tabpanel" >
+                <img src="images/eko hotel images/spa.jpg" alt="" class="w-55" style="width: 90%; height: 70vh;">
+                </div>
+                <div class="tab-pane fade" id="restaurant" role="tabpanel" >
+                 <img src="images/eko hotel images/resturant.jpg" alt="" style="width: 90%; height: 70vh;">
+                </div>
+                <div class="tab-pane fade" id="swimming" role="tabpanel" >
+                 <img src="images/eko hotel images/swimming-pool.jpg" alt="" style="width: 90%; height: 70vh;">
+                </div>
+                <div class="tab-pane fade" id="gym" role="tabpanel" >
+                <img src="images/eko hotel images/gym-4.jpg" alt="" style="width: 90%; height: 70vh;">
+                </div>
+
+              </div>
+            </div>
+            <div class= "col-lg-5 position-relative">
+            <div class="service-menu-area">
+              <ul class="nav">
+                <li>
+                  <a  data-bs-toggle="tab" href="#spa" class="active">
+                  <span class="service-icon">
+                    <i class="fas fa-spa"></i>
+                  </span>
+                  <h5>spa, beauty &Health</h5>
+                  <p><span class="text-warning">Spa and Beauty</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quam asperiores, </p>
+                </a>
+                </li>
+                <li>
+                  <a  data-bs-toggle="tab" href="#restaurant">
+                    <span class="service-icon">
+                      <i class="fas fa-utensils"></i>
+                    </span>
+                    <h5>Resturant</h5>
+                    <p><span class="text-warning">Resturant </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quam asperiores, </p>
+                  </a>
+                </li>
+                <li >
+                 <a  data-bs-toggle="tab" href="#swimming">
+                    <span class="service-icon">
+                      <i class="fas fa-swimming-pool"></i>
+                    </span>
+                    <h5>Swimming</h5>
+                    <p><span class="text-warning">Swimming </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quam asperiores, </p>
+                  </a>
+                </li>
+                <li >
+                  <a  data-bs-toggle="tab" href="#gym">
+                     <span class="service-icon">
+                      <i class="fa-solid fa-dumbbell"></i>
+                     </span>
+                     <h5>Gym</h5>
+                     <p><span class="text-warning">Gym </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quam asperiores, </p>
+                   </a>
+                 </li>
+              </ul>
+            </div>
+            </div>
+             </div>
+              
+             <!-- youtube video -->
+             <div class="row align-items-center hero-section mt-5">
+              <div class="col-md-6 mt-4">
+                <h5 class="section-title text-upper text-warning">Luxury living</h5>
+                <h1 class="display-5 fw-semi-bold">Discover A Brand luxurious Hotel</h1>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas vitae
+                  corporis sapiente fuga molestiae nam nesciunt dignissimos numquam. Ad
+                  consequatur laboriosam voluptates maxime sunt natus sint debitis ullam,
+                  impedit fuga.
+                </p>
+                <div class="d-flex gap-4">
+                  <a href="" class="btn btn-warning btn-room">Our Rooms</a>
+                  <a href="" class="btn btn-warning btn-book">Book a Room</a>
+                </div>
+              </div>
+              <div class="col-md-6 video-thumbnail-container">
+                <a href="https://youtu.be/PCLrJPZalmE?si=Z1tx9GP5A_5DDOqx" target="_blank" class="video-thumbnail">
+                  <img 
+                    src="https://img.youtube.com/vi/PCLrJPZalmE/0.jpg" 
+                    alt="Watch Video" 
+                    class="video-thumbnail-image"
+                  />
+                  <div class="play-button-overlay">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" viewBox="0 0 16 16">
+                      <path d="M4.79 3.093A.5.5 0 0 1 5.5 3v10a.5.5 0 0 1-.79.407l-6-5a.5.5 0 0 1 0-.814l6-5z"/>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+              <!-- youtube video end -->
+            </div>
+          </div>
+           </div>
+          </section>
+  <!-- service end -->
+
+  <!-- Team Section -->
+            <section id="team" class="team_wrapper">
+          <div class="container-xxl py-5"> 
+            <div class="container"> 
+            <div class="text-center wow fadeInUp"> 
+              <h6 class="section-title text-center text-warning text-uppercase">What i can do for you</h6>
+              <h1 class="mb-5"> Our Special<span class="text-warning text-uppercase"> Staff</span></h1>
+            </div>
+            <div class="row"> 
+              <div class="col-lg-3 col-md-6 mb-4">
+               <div class="card p-0 rounded">
+                <img src="images/eko hotel images/team1.jpeg" alt="" class="img-fluid rounded-2 w-100" style="height: 50vh;">
+                <div class="team-info">
+                  <h5>Justin Peace</h5>
+                  <p>Manager</p>
+                  <ul class="social-network">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+
+                  </ul>
+                </div>
+              </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card p-0 rounded">
+                 <img src="images/eko hotel images/team2.jpeg" alt="" class="img-fluid rounded-2 w-100" style="height: 50vh;">
+                 <div class="team-info">
+                   <h5>Ronald Short</h5>
+                   <p>Cheif Reception Officer</p>
+                   <ul class="social-network">
+                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                     <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+ 
+                   </ul>
+                 </div>
+               </div>
+               </div>
+               <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card p-0 rounded">
+                 <img src="images/eko hotel images/chef.jpeg" alt="" class="img-fluid rounded-2 w-100" style="height: 50vh;">
+                 <div class="team-info">
+                   <h5>Ashley stanley</h5>
+                   <p>Master Chief</p>
+                   <ul class="social-network">
+                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                     <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+ 
+                   </ul>
+                 </div>
+               </div>
+               </div>
+               <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card p-0 rounded">
+                 <img src="images/eko hotel images/team4.jpg" alt="" class="img-fluid rounded-2 w-100" style="height: 50vh;">
+                 <div class="team-info">
+                   <h5>Jessica watson</h5>
+                   <p>Housekeeping</p>
+                   <ul class="social-network">
+                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                     <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+ 
+                   </ul>
+                 </div>
+               </div>
+               </div>
+            </div>
+            </div>
+          </div>
+             </section>
+<!-- End of Team Section -->
+
+<!-- testimonial section -->
+ <section id="testimonial" class="testimonial-section">
+  
+                 <div class="container-xxl testimonial my-5 py-5 bg-dark w0w-zoomIn" id="testimonial" style="background-image: url(../eko\ hotel\ images/);">
+                 <div class="container">
+                  <h1 class="text-warning" style="text-align: center;">Testimonial</h1>
+                  <div class="owl-carousel testimonial-carousel py-5" style="display: block">
+                   
+                    <!-- 1st image -->
+                     <div class="testimonial-item bg-white position-relative rounded over-flow-hidden">
+                       <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure ratione dolorem, eaque quasi late ed.
+                       </p>
+                       <div class="d-flex align-items-center">
+                        <img src="images/eko hotel images/pic1.png" alt="" class="img-fluid flex-shrink-0 rounded" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <div class="ps-3">
+                          <h6 class="fw-bold mb-1">Client Name</h6>
+                          <small>Profession</small>
+                        </div>
+                       </div>
+                       <i class="fa fa-quote-right fa-2x text-warning position-absolute end-0 bottom-0 me-4 mn-n1"></i>
+                     </div>
+
+                     <!-- second text -->
+                     <div class="testimonial-item bg-white position-relative rounded over-flow-hidden">
+                      <p>
+                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure ratione dolorem, eaque quasi aliquid t.
+                      </p>
+                      <div class="d-flex align-items-center">
+                       <img src="images/eko hotel images/pic2.png" alt="" class="img-fluid flex-shrink-0 rounded" style="width: 50px; height: 50px; border-radius: 50%;">
+                       <div class="ps-3">
+                         <h6 class="fw-bold mb-1">Collins Daniel</h6>
+                         <small>Profession</small>
+                       </div>
+                      </div>
+                      <i class="fa fa-quote-right fa-2x text-warning position-absolute end-0 bottom-0 me-4 mn-n1"></i>
+                    </div>
+
+                    <!-- thrid text -->
+                    <div class="testimonial-item bg-white position-relative rounded over-flow-hidden">
+                      <p>
+                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure ratione dolorem, eaque quasi aliquid!
+                      </p>
+                      <div class="d-flex align-items-center">
+                       <img src="images/eko hotel images/pic3.jpg" alt="" class="img-fluid flex-shrink-0 rounded" style="width: 50px; height: 50px; border-radius: 50%;">
+                       <div class="ps-3">
+                         <h6 class="fw-bold mb-1">Shomuyiwa Zainab</h6>
+                         <small>Profession</small>
+                       </div>
+                      </div>
+                      <i class="fa fa-quote-right fa-2x text-warning position-absolute end-0 bottom-0 me-3 m-n1"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              </section>
+ <!-- end of testimonial section -->
+
+<!-- Footer setion -->
+             <section id="contact" class="footer_wrapper bg-dark mt-5 mt-md-0 pb-0">
+              <div class="container pb-3">
+               <div class="row">
+               <div class="col-md-3 mt-5">
+               <img src="images/eko hotel images/Eko hotel logo-header.jpg" alt="" class="text-white" style="color:white; width: 85%; margin-bottom: 20px;">
+               <p class="ps-0 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, 
+                uaerat quis id alias quos expedita, deleniti earum quia.</p>
+                <div class="contact-info">
+                  <ul class="list-unstyled">
+                   <li class="mb-3"><a href=""><i class="fa fa-home me-3 text-warning "></i> Plot 1415 Adetokunbo Ademola Street, PMB 12724, Victoria Island, Lagos Nigeria</a></li>
+                   <li class="mb-3"><a href="tel:12345678"><i class="fa fa-phone me-3 text-warning"></i>+234 201 2772700</a></li>
+                   <li class="mb-3"><a href="mailto:reservation@ekohotels.com"><i class="fa fa-envelope me-3 text-warning"></i>reservation@ekohotels.com</a></li>
+                  </ul>
+                </div>
+               </div>
+               <div class="col-md-3 mt-5" style="margin-top: 40px;"> 
+                <h5 class="mt-3 text-white">More Link</h5>
+                <ul class="link-widget p-0">
+                <li><a href="" class="">About</a></li>
+                <li><a href="" class="">our office</a></li>
+                <li><a href="" class="">Delivery</a></li>
+                <li><a href="" class="">Our Store</a></li>
+                <li><a href="" class="">Guarantee</a></li>
+                <li><a href="" class="">Buy Gift Crad</a></li>
+                <li><a href="" class="">Return Policy</a></li>
+              </ul>
+               </div>
+               <div class="col-md-3 mt-5"style="margin-top: 40px;" > 
+                <h5 class="mt-3 text-white">More Link</h5>
+                <ul class="link-widget p-0">
+                <li><a href="" class="">About</a></li>
+                <li><a href="" class="">our office</a></li>
+                <li><a href="" class="">Delivery</a></li>
+                <li><a href="" class="">Our Store</a></li>
+                <li><a href="" class="">Guarantee</a></li>
+                <li><a href="" class="">Buy Gift Crad</a></li>
+                <li><a href="" class="">Return Policy</a></li>
+              </ul>
+               </div>
+               <div class=" col-md-3 mt-5" style="margin-top: 40px;"> 
+                <h5>Newsletter</h5>
+                <div class="form-group mb-4">
+                <input type="text" class="form-control bg-transparent text-white" placeholder="enter your Email">
+                 <button type= "submit" class="main-btn rounded-2 mt-3 border-white text-white">Subscribe</button>
+              </div>
+              <h5>Stay Connected</h5>
+              <ul class="social-network d-flex align-items-center p-0">
+                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href=""><i class="fab fa-vimeo-v"></i></a></li>
+
+              </ul>
+              </div>
+
+               </div>
+              </div>
+              <!-- copy right -->
+               <div class="container-fluid copyright-section">
+                <p>Copyright<a href=""> © 2024 Eko Hotels & Suites</a> All Right Reserved</p>
+               </div>
+             </section>
+<!-- footer section end -->
+
+
+
+
+    <!-- Bootstrap Cdn link online js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- J query cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+  $(document).ready(function() {
+
+    $(window).scroll(function(){
+      // sticky navbar on scroll script
+      if(this.scrollY > 20) {
+        $('.navbar').addClass("sticky")
+      }else{
+        $('.navbar').removeClass("sticky");
+      }
+
+      // scroll-up button show/hide script
+      if(this.scrollY > 500){
+        $('.scroll-up-btn').addClass("show");
+      }else{
+        $('.scroll-up-btn').removeClass("show");
+      }
+    });
+
+    // slide-up script
+    $('.scroll-up-btn').click(function(){
+      $('html').animate({scrollTop: 0});
+      // removing smooth scroll on slide-up button click
+      $('html').css("scrollBehavior", "auto");
+    });
+
+    $('.navbar .navbar-nav li a').click(function(){
+      // applying again smooth scroll on menu items click
+      $('html').css("scrollBehaviour", "smooth");
+    });
+
+    // toggle menu/navbar script
+    $('.navbar-toggler').click(function(){
+    $('.navbar-nav-nav').toggleClass("active");
+    $('.navbar-toggle-icon').toggleClass("active");
+    });
+
+
+    $('.testimonial-carousel').owlCarousel({
+      loop: true,
+      margin: 25,
+      smartSpeed: 1000, // Fixed the typo
+      dots: false,
+      nav: true,
+      navText: [ 
+        '<i class="fas fa-angle-left"></i>',  // Corrected closing tag
+        '<i class="fas fa-angle-right"></i>'  // Corrected closing tag
+      ],
+      autoplay: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        }
+      }
+    })
+  })
+</script>
+</body>
+</html>
